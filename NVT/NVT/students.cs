@@ -1,27 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace NVT
+namespace PatLesson01
 {
     /// <summary>
-    /// class: students
-    /// author: Tú Văn
+    /// Class: Student
+    /// Author: Tnau-p
     /// </summary>
-    internal class students
+    internal class Student
     {
         //properties
-        public string maSV { get; set; }
-        public string hoTen { get; set; }
-        public DateTime ngaySinh { get; set; } 
-        public bool gioiTinh { get; set; }
+        public string masv { get; set; }
+        public string name { get; set; }
+        public DateTime? dateTime { get; set; }
+
+        public bool sex { get; set; }
         public string email { get; set; }
-        public string sDienThoai { get; set; }
+        public string phone { get; set; }
+
         public string nganhHoc { get; set; }
-        public float diemTB { get; set; }
+        public float dtb { get; set; }
         public bool trangThai { get; set; }
-
-
 
     }
 }

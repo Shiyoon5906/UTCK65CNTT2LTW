@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NVT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bffa3d10a252294fb542540a12ee4f5266d06263")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abfbfacf621dc8a9d2cb23a9f25fda24746793f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("NVT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NVT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

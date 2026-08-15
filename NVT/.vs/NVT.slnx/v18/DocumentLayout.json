@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "students.cs",
-              "DocumentMoniker": "D:\\LapTrinhWeb\\UTCK65CNTT2LTW\\NVT\\NVT\\students.cs",
-              "RelativeDocumentMoniker": "NVT\\students.cs",
-              "ToolTip": "D:\\LapTrinhWeb\\UTCK65CNTT2LTW\\NVT\\NVT\\students.cs",
-              "RelativeToolTip": "NVT\\students.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T13:42:47.333Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,9 +28,23 @@
               "RelativeDocumentMoniker": "NVT\\Program.cs",
               "ToolTip": "D:\\LapTrinhWeb\\UTCK65CNTT2LTW\\NVT\\NVT\\Program.cs",
               "RelativeToolTip": "NVT\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEIAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwBYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-11T13:02:21.368Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "students.cs",
+              "DocumentMoniker": "D:\\LapTrinhWeb\\UTCK65CNTT2LTW\\NVT\\NVT\\students.cs",
+              "RelativeDocumentMoniker": "NVT\\students.cs",
+              "ToolTip": "D:\\LapTrinhWeb\\UTCK65CNTT2LTW\\NVT\\NVT\\students.cs",
+              "RelativeToolTip": "NVT\\students.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-11T13:42:47.333Z",
               "EditorCaption": ""
             }
           ]

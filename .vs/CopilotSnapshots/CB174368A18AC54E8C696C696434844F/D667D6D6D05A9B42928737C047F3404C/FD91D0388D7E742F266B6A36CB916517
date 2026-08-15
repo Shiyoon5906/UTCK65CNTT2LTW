@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace NVT
+{
+    public enum Gender
+    {
+        Nam = 1,
+        Nu = 2,
+        Other = 3
+    }
+
+    /// <summary>
+    /// class: students
+    /// author: Tú Văn
+    /// </summary>
+    internal class students
+    {
+        //properties
+        public string maSV { get; set; }
+        public string hoTen { get; set; }
+        public DateTime ngaySinh { get; set; } 
+        public Gender gioiTinh { get; set; }
+        public string email { get; set; }
+        public string soDienThoai { get; set; }
+        public string nganhHoc { get; set; }
+        public double diemTB { get; set; }
+        public bool trangThai { get; set; }
+
+
+
+    }
+}

@@ -1,0 +1,267 @@
+﻿namespace NVT
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Chao mung ban den voi chuong trinh quan ly sinh vien");
+            string choise;
+            List<students> students = new List<students>
+            {
+                new students { maSV = "241230879", hoTen = "Nguyen Van Tu", ngaySinh = DateTime.Parse("2006-09-05"), gioiTinh = Gender.Nam, email = "nguyentu05092006@gmail.com", soDienThoai = "0326466758", nganhHoc = "cntt", diemTB = "3.4", trangThai = StudentStatus.danghoc }
+            };
+            do
+            {
+                menu();
+                Console.WriteLine("ban chon chuc nang gi: ");
+                choise = Console.ReadLine();
+                switch (choise)
+                {
+                    case "1":
+                        //them sinh vien
+                        ThemMoiSinhVien(students);
+                        break;
+                    case "5":
+                        // cap nhat sinh vien
+                        CapNhatThongTinSinhVien(students);
+                        break;
+                    case "2":
+                        //hien thi
+                        HienThiThongTinSinhVien(students);
+                        break;
+                    case "3":
+                        // tim sinh vien theo ma
+                        Console.Write("Nhap ma sinh vien can tim: ");
+                        string timMa = Console.ReadLine();
+                        var sv = TimSinhVienTheoMa(students, timMa);
+                        if (sv == null)
+                        {
+                            Console.WriteLine("Khong tim thay sinh vien voi ma: " + timMa);
+                        }
+                        else
+                        {
+                            Console.WriteLine("maSV: " + sv.maSV);
+                            Console.WriteLine("hoTen: " + sv.hoTen);
+                            Console.WriteLine("ngaySinh: " + sv.ngaySinh);
+                            Console.WriteLine("gioiTinh: " + sv.gioiTinh);
+                            Console.WriteLine("trangThai: " + sv.trangThai);
+                            Console.WriteLine("email: " + sv.email);
+                            Console.WriteLine("soDienThoai: " + sv.soDienThoai);
+                            Console.WriteLine("nganhHoc: " + sv.nganhHoc);
+                            Console.WriteLine("diemTB: " + sv.diemTB);
+                            Console.WriteLine("-----------------------------");
+                        }
+                        break;
+                    case "4":
+                        // tim gan dung theo ho ten
+                        Console.Write("Nhap ten hoac chuoi can tim: ");
+                        string query = Console.ReadLine();
+                        var matches = TimGanDungTheoHoTen(students, query);
+                        if (matches == null || matches.Count == 0)
+                        {
+                            Console.WriteLine("Khong tim thay sinh vien nao phu hop.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ket qua tim kiem:");
+                            foreach (var m in matches)
+                            {
+                                Console.WriteLine("maSV: " + m.maSV);
+                                Console.WriteLine("hoTen: " + m.hoTen);
+                                Console.WriteLine("ngaySinh: " + m.ngaySinh);
+                                Console.WriteLine("gioiTinh: " + m.gioiTinh);
+                                Console.WriteLine("email: " + m.email);
+                                Console.WriteLine("soDienThoai: " + m.soDienThoai);
+                                Console.WriteLine("nganhHoc: " + m.nganhHoc);
+                                Console.WriteLine("diemTB: " + m.diemTB);
+                                Console.WriteLine("trangThai: " + m.trangThai);
+                                Console.WriteLine("-----------------------------");
+                            }
+                        }
+                        break;
+                    case "14":
+                        Console.WriteLine("Ban da chon thoat chuong trinh");
+                        break;
+                    default:
+                        Console.WriteLine("Ban da chon sai chuc nang, vui long chon lai");
+                        break;
+                }
+            } while (choise != "14");
+
+        }
+
+        static void menu()      
+        {
+            Console.WriteLine("=============CHUC NANG=============");
+            Console.WriteLine("1.\tThem sinh vien.\r");
+            Console.WriteLine("2.\tHien thi danh sach.\r");
+            Console.WriteLine("3.\tTim sinh vien theo ma.\r");
+            Console.WriteLine("4.\tTim gan dung theo ho ten.\r");
+            Console.WriteLine("5.\tCap nhat sinh vien.\r");
+            Console.WriteLine("6.\txoa sinh vien.\r");
+            Console.WriteLine("7.\tsap xep theo ho ten.\r");
+            Console.WriteLine("8.\tsap xep theo diem trung binh.\r");
+            Console.WriteLine("9.\thien thi sinh vien co diem tu 8 tro len.\r");
+            Console.WriteLine("10.\thien thi sinh vien co dim cao nhat.\r");
+            Console.WriteLine("11.\ttinh diem trung binh toan bo sinh vien.\r");
+            Console.WriteLine("12.\tthong ke sinh vien theo nganh.\r");
+            Console.WriteLine("13.\tthong ke sinh vien theo trang thai.\r");
+            Console.WriteLine("14.\tThoat");
+
+        }
+        static void HienThiThongTinSinhVien(List<students> Student)
+        {
+            Console.WriteLine("Danh sach sinh vien: ");
+            foreach (var item in Student)
+            {
+                Console.WriteLine("maSV: " + item.maSV);
+                Console.WriteLine("hoTen: " + item.hoTen);
+                Console.WriteLine("ngaySinh: " + item.ngaySinh);
+                Console.WriteLine("gioiTinh: " + item.gioiTinh);
+                Console.WriteLine("email: " + item.email);
+                Console.WriteLine("soDienThoai: " + item.soDienThoai);
+                Console.WriteLine("nganhHoc: " + item.nganhHoc);
+                Console.WriteLine("diemTB: " + item.diemTB);
+                Console.WriteLine("trangThai: " + item.trangThai);
+                Console.WriteLine("-----------------------------");
+            }
+
+        }
+        // tim sinh vien theo ma 
+        static students TimSinhVienTheoMa(List<students> Student, string maSV)
+        {
+            if (Student == null || string.IsNullOrWhiteSpace(maSV))
+                return null;
+
+            foreach (var s in Student)
+            {
+                if (s.maSV == maSV)
+                    return s;
+            }
+            return null;
+        }
+
+        // tim sinh vien theo ten gan dung
+        static List<students> TimGanDungTheoHoTen(List<students> Student, string query)
+        {
+            var results = new List<students>();
+            if (Student == null || string.IsNullOrWhiteSpace(query))
+                return results;
+
+            string q = query.Trim().ToLowerInvariant();
+            foreach (var s in Student)
+            {
+                if (string.IsNullOrWhiteSpace(s.hoTen))
+                    continue;
+
+                string nameLower = s.hoTen.Trim().ToLowerInvariant();
+                //
+                if (nameLower.Contains(q))
+                {
+                    results.Add(s);
+                    continue;
+                }
+
+                // 
+                var tokens = nameLower.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var t in tokens)
+                {
+                    if (t == q)
+                    {
+                        results.Add(s);
+                        break;
+                    }
+                }
+            }
+
+            return results;
+        }
+        static void ThemMoiSinhVien(List<students> Student)
+        {
+            Console.WriteLine("Nhap thong tin sinh vien: ");
+            students student = new students();
+            Console.Write("Nhap ma sinh vien: ");
+            student.maSV = Console.ReadLine();
+            Console.Write("ho ten: ");
+            student.hoTen = Console.ReadLine();
+            Console.WriteLine("nhap ngay sinh: ");
+            student.ngaySinh = DateTime.Parse(Console.ReadLine());
+           /// 
+
+            Gender gioiTinh;
+            while (true)
+            {
+                Console.Write("Nhap gioi tinh (nam/nu/khac): ");
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("Gkhong hop le. Vui long nhap lai.");
+                    continue;
+                }
+
+                input = input.Trim().ToLowerInvariant();
+                if (input == "nam")
+                {
+                    gioiTinh = Gender.Nam;
+                    break;
+                }
+                if (input == "nu")
+                {   
+                    gioiTinh = Gender.Nu;
+                    break;
+                }
+                else
+                {
+                    gioiTinh = Gender.Other;
+                    break;
+                }
+
+                
+            }
+
+            student.gioiTinh = gioiTinh;
+            Console.Write("Nhap email: ");
+            student.email = Console.ReadLine();
+            Console.WriteLine("Nhap so dien thoai: ");
+            student.soDienThoai = Console.ReadLine();
+            Console.WriteLine("Nhap nganh hoc: ");
+            student.nganhHoc = Console.ReadLine();
+            Console.WriteLine("Nhap diem trung binh: ");
+            student.diemTB = double.Parse(Console.ReadLine());
+            StudentStatus trangThai;
+            while (true)
+            {
+                Console.Write("Nhap trang thai hoc tap (1-totnghiep/2-danghoc/3-baoluu): ");
+                string input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("Khong hop le. Vui long nhap lai.");
+                    continue;
+                }
+                input = input.Trim();
+                if (input == "1")
+                {
+                    trangThai = StudentStatus.totnghiep;
+                    break;
+                }
+                if (input == "2")
+                {
+                    trangThai = StudentStatus.danghoc;
+                    break;
+                }
+                if (input == "3")
+                {
+                    trangThai = StudentStatus.baoluu;
+                    break;
+                }   
+                else
+                {
+                    Console.WriteLine("Khong hop le. Vui long nhap lai.");
+                    continue;
+                }
+            }
+           //
+            Student.Add(student);
+        }
+    }
+}
