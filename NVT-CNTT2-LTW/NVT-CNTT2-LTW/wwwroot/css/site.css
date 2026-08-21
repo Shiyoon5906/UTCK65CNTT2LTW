@@ -1,0 +1,33 @@
+.banner {
+    background-color: #E8F5E9;
+    padding: 40px;
+    text-align: center;
+
+    .azure-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-left: 20px;
+        color: #0078D7;
+    }
+
+    .azure-subtitle {
+        font-size: 18px;
+        margin-left: 20px;
+        color: #333;
+    }
+
+    .product-list {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .product-item {
+        margin-bottom: 20px;
+    }
+
+        .product-item img {
+            max-height: 200px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
