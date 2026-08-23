@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NVT-CNTT2-LTW")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56b85aba2dff2c86651c6e44dd2df570b4612b35")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57c8097c305791cb9b12bf22b82088052c663246")]
 [assembly: System.Reflection.AssemblyProductAttribute("NVT-CNTT2-LTW")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NVT-CNTT2-LTW")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

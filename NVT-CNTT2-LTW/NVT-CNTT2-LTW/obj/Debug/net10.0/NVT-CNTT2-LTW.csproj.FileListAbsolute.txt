@@ -96,4 +96,4 @@ D:\LapTrinhWeb\UTCK65CNTT2LTW\NVT-CNTT2-LTW\NVT-CNTT2-LTW\obj\Debug\net10.0\refi
 D:\LapTrinhWeb\UTCK65CNTT2LTW\NVT-CNTT2-LTW\NVT-CNTT2-LTW\obj\Debug\net10.0\NVT-CNTT2-LTW.pdb
 D:\LapTrinhWeb\UTCK65CNTT2LTW\NVT-CNTT2-LTW\NVT-CNTT2-LTW\obj\Debug\net10.0\NVT-CNTT2-LTW.genruntimeconfig.cache
 D:\LapTrinhWeb\UTCK65CNTT2LTW\NVT-CNTT2-LTW\NVT-CNTT2-LTW\obj\Debug\net10.0\ref\NVT-CNTT2-LTW.dll
-D:\LapTrinhWeb\UTCK65CNTT2LTW\NVT-CNTT2-LTW\NVT-CNTT2-LTW\obj\Debug\net10.0\compressed\qkui8fndrk-{0}-tunzafchlo-tunzafchlo.gz
+D:\LapTrinhWeb\UTCK65CNTT2LTW\NVT-CNTT2-LTW\NVT-CNTT2-LTW\obj\Debug\net10.0\compressed\qkui8fndrk-{0}-w5p36dydc6-w5p36dydc6.gz

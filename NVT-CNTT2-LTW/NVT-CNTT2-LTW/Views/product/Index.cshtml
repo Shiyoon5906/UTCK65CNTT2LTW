@@ -1,0 +1,31 @@
+﻿@model IEnumerable<NVT_CNTT2_LTW.Models.Product>
+
+<div class="product-management">
+    <h1 class="text-center mb-4">Quản lý sản phẩm</h1>
+
+    <table class="table table-bordered text-center w-75 mx-auto">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Ngày tạo</th>
+                <th>Ảnh</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price.ToString("N0") đ</td>
+                    <td>@item.CreatedAt.ToString("dd-MM-yyyy")</td>
+                    <td><img src="~/images/@item.Image" alt="@item.Name" class="product-img" /></td>
+                    <td><a href="#" class="btn btn-success">Xem</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
