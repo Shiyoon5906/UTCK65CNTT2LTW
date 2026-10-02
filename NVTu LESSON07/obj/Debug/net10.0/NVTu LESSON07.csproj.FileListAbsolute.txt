@@ -1,0 +1,8 @@
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.GeneratedMSBuildEditorConfig.editorconfig
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.AssemblyInfoInputs.cache
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.AssemblyInfo.cs
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.csproj.CoreCompileInputs.cache
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.MvcApplicationPartsAssemblyInfo.cache
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.RazorAssemblyInfo.cache
+D:\LTTQ\NVTu LESSON07\obj\Debug\net10.0\NVTu LESSON07.RazorAssemblyInfo.cs
